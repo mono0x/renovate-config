@@ -1,0 +1,44 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Track and update dprint plugin URLs in dprint.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Detect official dprint plugin versions in dprint.json",
+      "managerFilePatterns": [
+        "/^dprint\\.json$/"
+      ],
+      "matchStrings": [
+        "https://plugins\\.dprint\\.dev/(?<plugin>json|markdown|toml)-(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.wasm"
+      ],
+      "depNameTemplate": "dprint-plugin-{{{plugin}}}",
+      "packageNameTemplate": "dprint/dprint-plugin-{{{plugin}}}",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "customType": "regex",
+      "description": "Detect g-plane/pretty_yaml dprint plugin version in dprint.json",
+      "managerFilePatterns": [
+        "/^dprint\\.json$/"
+      ],
+      "matchStrings": [
+        "https://plugins\\.dprint\\.dev/g-plane/pretty_yaml-v(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.wasm"
+      ],
+      "depNameTemplate": "pretty_yaml",
+      "packageNameTemplate": "g-plane/pretty_yaml",
+      "datasourceTemplate": "github-releases"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Group dprint plugin updates",
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchFileNames": [
+        "dprint.json"
+      ],
+      "groupName": "dprint plugins"
+    }
+  ]
+}

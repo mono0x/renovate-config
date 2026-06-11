@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "github>mono0x/renovate-config:hk-pkl",
+    "github>mono0x/renovate-config:dprint-plugins"
+  ],
+  "timezone": "Asia/Tokyo",
+  "minimumReleaseAge": "2 days",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "mise"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "mise",
+      "schedule": [
+        "on monday"
+      ]
+    }
+  ]
+}

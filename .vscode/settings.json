@@ -1,0 +1,16 @@
+{
+  "[json][jsonc][markdown][yaml][toml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": [
+      ".github/workflows/*.yaml",
+      ".github/workflows/*.yml"
+    ],
+    "https://json.schemastore.org/github-action.json": [
+      ".github/actions/**/action.yml",
+      ".github/actions/**/action.yaml"
+    ]
+  }
+}
