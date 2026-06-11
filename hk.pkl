@@ -15,6 +15,10 @@ hooks {
     stash = "git"
     steps = linters
   }
+  ["post-tool-use"] {
+    fix = true
+    steps = linters
+  }
   ["fix"] {
     fix = true
     steps = linters
