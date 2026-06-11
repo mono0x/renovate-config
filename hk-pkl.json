@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Track and update hk.pkl package imports from jdx/hk GitHub releases",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Detect hk version in hk.pkl",
+      "managerFilePatterns": [
+        "/^hk\\.pkl$/"
+      ],
+      "matchStrings": [
+        "releases/download/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/",
+        "hk@(?<currentValue>\\d+\\.\\d+\\.\\d+)#"
+      ],
+      "depNameTemplate": "hk-pkl",
+      "packageNameTemplate": "jdx/hk",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.+)$"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Group hk.pkl updates with jdx/hk releases",
+      "matchPackageNames": [
+        "jdx/hk"
+      ],
+      "groupName": "hk"
+    }
+  ]
+}
