@@ -12,6 +12,9 @@
       "matchManagers": [
         "mise"
       ],
+      "matchPackageNames": [
+        "!hk"
+      ],
       "matchUpdateTypes": [
         "minor",
         "patch"
