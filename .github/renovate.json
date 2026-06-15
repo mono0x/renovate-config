@@ -12,8 +12,18 @@
       "matchManagers": [
         "mise"
       ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "mise",
+      "schedule": [
+        "on monday"
+      ]
+    },
+    {
       "matchDepNames": [
-        "!hk"
+        "hk-pkl"
       ],
       "matchUpdateTypes": [
         "minor",
