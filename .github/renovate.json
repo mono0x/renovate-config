@@ -7,6 +7,9 @@
   ],
   "timezone": "Asia/Tokyo",
   "minimumReleaseAge": "2 days",
+  "group": {
+    "commitMessageTopic": "{{#if upgrades.1}}{{{groupName}}}{{else}}{{{depName}}}{{/if}}"
+  },
   "packageRules": [
     {
       "matchManagers": [
@@ -16,7 +19,7 @@
         "minor",
         "patch"
       ],
-      "groupName": "mise",
+      "groupName": "mise tools",
       "schedule": [
         "on monday"
       ]
@@ -29,7 +32,7 @@
         "minor",
         "patch"
       ],
-      "groupName": "mise",
+      "groupName": "mise tools",
       "schedule": [
         "on monday"
       ]
