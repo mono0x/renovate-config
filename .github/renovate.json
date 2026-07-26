@@ -14,6 +14,19 @@
   "packageRules": [
     {
       "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "GitHub Actions",
+      "schedule": [
+        "on the first day of the month"
+      ]
+    },
+    {
+      "matchManagers": [
         "mise"
       ],
       "matchUpdateTypes": [
