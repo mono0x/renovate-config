@@ -7,6 +7,9 @@
   ],
   "timezone": "Asia/Tokyo",
   "minimumReleaseAge": "2 days",
+  "schedule": [
+    "* * 1 * *"
+  ],
   "group": {
     "commitMessageTopic": "{{#if upgrades.[1]}}{{{groupName}}}{{else}}{{{depName}}}{{/if}}",
     "commitMessageExtra": "{{#unless upgrades.[1]}}to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}{{/unless}}"
@@ -20,10 +23,7 @@
         "minor",
         "patch"
       ],
-      "groupName": "GitHub Actions",
-      "schedule": [
-        "on the first day of the month"
-      ]
+      "groupName": "GitHub Actions"
     },
     {
       "matchManagers": [
@@ -33,10 +33,7 @@
         "minor",
         "patch"
       ],
-      "groupName": "mise tools",
-      "schedule": [
-        "on the first day of the month"
-      ]
+      "groupName": "mise tools"
     },
     {
       "matchDepNames": [
@@ -46,10 +43,7 @@
         "minor",
         "patch"
       ],
-      "groupName": "mise tools",
-      "schedule": [
-        "on the first day of the month"
-      ]
+      "groupName": "mise tools"
     }
   ]
 }
