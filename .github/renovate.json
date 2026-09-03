@@ -7,10 +7,23 @@
   ],
   "timezone": "Asia/Tokyo",
   "minimumReleaseAge": "2 days",
+  "platformAutomerge": false,
+  "automergeStrategy": "squash",
   "schedule": [
     "* * 1 * *"
   ],
   "packageRules": [
+    {
+      "description": "Automerge everything except major updates",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest",
+        "pin",
+        "pinDigest"
+      ],
+      "automerge": true
+    },
     {
       "matchManagers": [
         "github-actions"
