@@ -1,58 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    "github>mono0x/renovate-config:hk-pkl",
-    "github>mono0x/renovate-config:dprint-plugins"
-  ],
-  "timezone": "Asia/Tokyo",
-  "minimumReleaseAge": "2 days",
-  "platformAutomerge": false,
-  "automergeStrategy": "squash",
-  "schedule": [
-    "* * 1 * *"
-  ],
-  "packageRules": [
-    {
-      "description": "Automerge everything except major updates",
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "digest",
-        "pin",
-        "pinDigest"
-      ],
-      "automerge": true
-    },
-    {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "GitHub Actions"
-    },
-    {
-      "matchManagers": [
-        "mise"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "mise tools"
-    },
-    {
-      "matchDepNames": [
-        "hk-pkl"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "mise tools"
-    }
+    "github>mono0x/renovate-config:maintenance"
   ]
 }
