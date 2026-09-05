@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shared base settings for repositories in maintenance mode",
+  "extends": [
+    "github>mono0x/renovate-config:base"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest",
+        "pin",
+        "pinDigest"
+      ],
+      "schedule": [
+        "* * 1 * *"
+      ]
+    },
+    {
+      "matchJsonata": [
+        "groupName = 'GitHub Actions'"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest",
+        "pin",
+        "pinDigest"
+      ],
+      "schedule": [
+        "* * 1 * *"
+      ]
+    }
+  ]
+}
