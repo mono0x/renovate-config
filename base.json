@@ -7,7 +7,7 @@
     "github>mono0x/renovate-config:hk-pkl"
   ],
   "timezone": "Asia/Tokyo",
-  "minimumReleaseAge": "2 days",
+  "minimumReleaseAge": "7 days",
   "osvVulnerabilityAlerts": true,
   "automergeStrategy": "squash",
   "packageRules": [
