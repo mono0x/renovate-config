@@ -79,7 +79,6 @@
         "mise"
       ],
       "matchUpdateTypes": [
-        "minor",
         "patch"
       ],
       "groupName": "mise tools"
@@ -90,7 +89,6 @@
         "hk-pkl"
       ],
       "matchUpdateTypes": [
-        "minor",
         "patch"
       ],
       "groupName": "mise tools"
