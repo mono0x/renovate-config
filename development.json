@@ -4,6 +4,7 @@
   "extends": [
     "github>mono0x/renovate-config:base"
   ],
+  "minimumReleaseAge": "7 days",
   "packageRules": [
     {
       "matchUpdateTypes": [
