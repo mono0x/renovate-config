@@ -3,6 +3,7 @@
   "description": "Shared base settings. Extend :development or :maintenance instead of this preset directly, since it sets no schedule or minimumReleaseAge",
   "extends": [
     "config:recommended",
+    "security:gomodIndirectSecurityUpdates",
     "github>mono0x/renovate-config:dprint-plugins",
     "github>mono0x/renovate-config:hk-pkl"
   ],
